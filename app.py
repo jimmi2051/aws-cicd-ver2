@@ -9,5 +9,19 @@ def returnBackwardsString(random_string):
     return "".join(reversed(random_string))
 
 
+@app.route("/")
+def home():
+    return {
+        "description": "service is ok."
+    }
+
+
+@app.route("/healthCheck")
+def healthCheck():
+    return {
+        "description": "service is ok."
+    }
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
